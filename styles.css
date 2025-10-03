@@ -1,0 +1,35 @@
+/* Font styles */
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-decoration: underline dotted ;
+}
+
+footer {
+    font-size: smaller;
+    font-style: italic;
+    margin-top: 3em;
+}
+
+/* Section heading colours */
+#hobbies h2 {
+    color: red;
+}
+
+#sushi h2 {
+    color: green;
+}
+
+#work h2 {
+    color: blue;
+}
