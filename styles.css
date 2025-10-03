@@ -1,35 +1,75 @@
-/* Font styles */
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    --background: #f0fff2;
+    --primary: #326b31;
+    --secondary: #6abb5f;
+    --black: #000000;
+    --white: #FFFFFF;
+    --font-header: Georgia, 'Times New Roman', Times, serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-h1, h2, h3 {
-    font-family: Georgia, 'Times New Roman', Times, serif
+body {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    background-color: var(--background);
+    font-family: var(--font-body);
 }
 
-code {
-    font-family: 'Courier New', Courier, monospace;
+#hero {
+    background-image: url('./images/FoggyForest-3069x1080.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 1rem;
 }
+
 
 h1 {
-    text-decoration: underline dotted ;
+    font-family: var(--font-header);
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 15rem;
+    color: var(--primary);
+}
+
+h2 {
+    color: var(--primary);
+    font-family: var(--font-header);
+    font-size: 2rem;
+}
+
+main {
+    padding: 0 1rem 0 1rem;
+}
+
+a {
+    color: var(--primary);
+}
+
+a:hover, a:active {
+    color: var(--secondary);
+}
+
+a:visited {
+    color: var(--black);
+}
+
+
+figcaption {
+    font-style: italic;
+    font-size: smaller;
+}
+
+hr {
+    border: 0;
+    border-top: 2px dotted var(--primary);
 }
 
 footer {
-    font-size: smaller;
-    font-style: italic;
-    margin-top: 3em;
-}
-
-/* Section heading colours */
-#hobbies h2 {
-    color: red;
-}
-
-#sushi h2 {
-    color: green;
-}
-
-#work h2 {
-    color: blue;
+    padding: 3rem 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
 }
