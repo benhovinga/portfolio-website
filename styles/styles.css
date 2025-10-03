@@ -1,0 +1,189 @@
+@font-face {
+    font-family: "Dancing Script";
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/DancingScript/DancingScript-Regular.woff2') format('woff2'), 
+         url('../fonts/DancingScript/DancingScript-Regular.ttf') format('truetype');
+}
+
+:root {
+    --background: #f0fff2;
+    --primary: #326b31;
+    --secondary: #04AA6D;
+    --black: #000000;
+    --white: #FFFFFF;
+    --font-header: "Dancing Script", cursive;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--background);
+    font-family: var(--font-body);
+}
+
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--background);
+    overflow: hidden;
+}
+
+nav #desktop-menu {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+nav #desktop-menu li + li:before {
+    color: var(--primary);
+    content: "|";
+    padding-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* HERO SECTION */
+
+#hero {
+    background-image: url('../images/FoggyForest-2054x1080.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    padding-top: 70px;
+}
+
+#hero > div {
+    background-color: rgba(0, 20, 0, 0.4);
+    align-content:center;
+    text-align: center;
+    padding: 0 2rem;
+    height: 100%;
+}
+
+#hero h1 {
+    font-family: var(--font-header);
+    font-size: 4rem;
+    margin-top: 0;
+    color: var(--white);
+}
+
+#call-to-action {
+    margin-top: 3rem;
+}
+
+#call-to-action .button {
+    font-size: 1.2rem;
+    margin: 0.5rem;
+}
+
+/* BUTTONS */
+
+.button {
+    border-color: var(--black);
+    color: var(--black);
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--secondary);
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.button.primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+}
+
+.button.primary:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    border-color: var(--secondary);
+}
+
+/* CONTAINER LAYOUT */
+
+.container {
+    padding: 0 1rem 0 1rem;
+    margin: 0 auto;
+    max-width: 75ch;
+}
+
+/* SECTION HEADERS */
+
+h2 {
+    color: var(--primary);
+    font-family: var(--font-header);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+/* LINKS */
+
+a {
+    color: var(--primary);
+}
+
+a:hover, a:active {
+    color: var(--secondary);
+}
+
+a:visited {
+    color: var(--black);
+}
+
+/* IMAGE CAPTIONS */
+
+figcaption {
+    font-style: italic;
+    font-size: smaller;
+}
+
+/* SECTION SEPARATOR */
+
+hr {
+    border: 0;
+    border-top: 2px dotted var(--primary);
+    margin-top: 3rem;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    padding: 2rem 1rem;
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    margin-top: 4rem;
+}
