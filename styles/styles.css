@@ -28,6 +28,35 @@ body {
     font-family: var(--font-body);
 }
 
+/* GLOBAL ELEMENTS */
+
+a {
+    color: var(--primary);
+}
+
+a:hover, a:active {
+    color: var(--secondary);
+}
+
+a:visited {
+    color: var(--black);
+}
+
+acronym {
+    cursor: help;
+}
+
+hr {
+    border: 0;
+    border-top: 2px dotted var(--primary);
+    margin-top: 3rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 /* NAVIGATION */
 
 nav {
@@ -149,33 +178,11 @@ h2 {
     text-align: center;
 }
 
-/* LINKS */
-
-a {
-    color: var(--primary);
-}
-
-a:hover, a:active {
-    color: var(--secondary);
-}
-
-a:visited {
-    color: var(--black);
-}
-
 /* IMAGE CAPTIONS */
 
 figcaption {
     font-style: italic;
     font-size: smaller;
-}
-
-/* SECTION SEPARATOR */
-
-hr {
-    border: 0;
-    border-top: 2px dotted var(--primary);
-    margin-top: 3rem;
 }
 
 /* FOOTER SECTION */
