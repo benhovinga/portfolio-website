@@ -14,6 +14,7 @@
     --white: #FFFFFF;
     --font-header: "Dancing Script", serif;
     --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --mobile-breakpoint: 720px;
 }
 
 html {
@@ -87,6 +88,34 @@ img {
     padding-right: 1rem;
 }
 
+@media(max-width:720px){
+    #desktop-menu {
+        display: none;
+    }
+    
+    #mobile-menu {
+        position: relative;
+        z-index: 10;
+        max-height: 100vh;
+        opacity: 1;
+        overflow: hidden;
+        transition: all .200s ease-in-out;
+        display: block;
+        list-style: none;
+    }
+
+    #mobile-menu li {
+        font-size: 2rem;
+        display: block;    
+        width: fit-content;
+        margin: 15% auto;
+    }
+
+    #mobile-menu li:last-child {
+        margin-bottom: 2rem;
+    }
+}
+
 nav a {
     text-decoration: none;
 }
@@ -104,6 +133,12 @@ nav a:hover {
     background-repeat: no-repeat;
     height: 70vh;
     padding-top: 4.35rem;
+}
+
+@media(max-width:720px){
+    #hero {
+        padding-top: 0;
+    }
 }
 
 #hero > div {
