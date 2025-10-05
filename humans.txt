@@ -1,0 +1,11 @@
+/* TEAM */    
+    Author: Benjamin P.C. Hovinga
+    Site: ben.hovinga.ca
+    Location: Halifax, Nova Scotia, Canada
+
+/* THANKS */
+
+
+/* SITE */
+    Last update: 2025-10-04
+    Standards: HTML5, CSS3
