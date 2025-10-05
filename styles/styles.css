@@ -117,6 +117,12 @@ nav a:hover {
     color: var(--white);
 }
 
+#hero h1 acronym {
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px dashed;
+}
+
 #call-to-action {
     margin-top: 3rem;
 }
