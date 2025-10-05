@@ -59,25 +59,29 @@ img {
 
 /* NAVIGATION */
 
-nav {
+#mobile-menu {
+    display: none;
+}
+
+#desktop-menu {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 70px;
+    height: 4.35rem;
     background-color: var(--background);
     overflow: hidden;
-}
-
-nav #desktop-menu {
     padding: 0;
+    margin: 0;
     list-style: none;
     display: flex;
     gap: 1rem;
     justify-content: center;
+    align-items: center;
     font-size: 1.3rem;
 }
 
-nav #desktop-menu li + li:before {
+#desktop-menu li + li:before {
+    /* Generates separator pipes between menu items */
     color: var(--primary);
     content: "|";
     padding-right: 1rem;
@@ -99,7 +103,7 @@ nav a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     height: 70vh;
-    padding-top: 70px;
+    padding-top: 4.35rem;
 }
 
 #hero > div {
