@@ -1,3 +1,4 @@
+const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 let isOpen = false;
 
@@ -13,10 +14,20 @@ function toggleMobileMenu(){
         console.debug('Menu is open.');
     }
     isOpen = !isOpen;
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
 }
 
 // Show/hide menu when clicking the hamburger button
-document.getElementById('hamburger').addEventListener('click', toggleMobileMenu);
+hamburger.addEventListener('click', toggleMobileMenu);
+
+// Show/hide menu with keyboard 'Enter' and 'Spacebar' keys
+hamburger.addEventListener('keydown', function(keyboardEvent) {
+    if (keyboardEvent.key === 'Enter' || keyboardEvent.key === ' ') {
+        keyboardEvent.preventDefault();
+        toggleMobileMenu();
+    }
+})
 
 // Hide menu when clicking any menu link
 document.querySelectorAll('#mobile-menu li').forEach(link => {
