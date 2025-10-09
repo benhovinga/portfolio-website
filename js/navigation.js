@@ -1,37 +1,67 @@
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobile-menu');
-let isOpen = false;
+const openMenuIcon = document.getElementById("open-menu");
+const menuContainer = document.getElementById("menu-container");
+const closeMenuIcon = document.getElementById("close-menu");
+const navigationMenu = document.getElementById("menu-wrapper");
 
-// Method to show or hide the mobile menu
-function toggleMobileMenu(){
-    if (isOpen){
-        mobileMenu.style.maxHeight = '0px';
-        mobileMenu.style.opacity = '0';
-        console.debug('Menu is closed.');
-    } else {
-        mobileMenu.style.maxHeight = '100vh';
-        mobileMenu.style.opacity = '1';
-        console.debug('Menu is open.');
+const allMenuItems = document.querySelectorAll('[role = "menu-item"');
+
+const OpenMenu = () => {
+  openMenuIcon.setAttribute("aria-expanded", "true");
+  openMenuIcon.classList.add("hide");
+  menuContainer.classList.remove("hide");
+  closeMenuIcon.focus();
+  closeMenuIcon.setAttribute("aria-expanded", "true");
+
+  menuContainer.addEventListener("keyup", HandleEscapeKeyPress);
+
+  allMenuItems.forEach((menuItem, menuItemIndex) => {
+    menuItem.addEventListener("keyup", (e) => {
+      ArrowKeyPress(e, menuItemIndex);
+    });
+  });
+};
+
+const HandleEscapeKeyPress = (e) => {
+  if (e.key === "Escape") {
+    CloseMenu();
+  }
+};
+
+const ArrowKeyPress = (e, menuItemIndex) => {
+  const isFirstMenuItem = menuItemIndex === 0;
+  const isLastMenuItem = menuItemIndex === allMenuItems.length - 1;
+  const nextMenuItem = allMenuItems.item(menuItemIndex + 1);
+  const previousMenuItem = allMenuItems.item(menuItemIndex - 1);
+
+  if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+    if (isLastMenuItem) {
+      allMenuItems.item(0).focus();
+      return;
     }
-    isOpen = !isOpen;
-    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    mobileMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
-}
+    nextMenuItem.focus();
+  }
 
-// Show/hide menu when clicking the hamburger button
-hamburger.addEventListener('click', toggleMobileMenu);
-
-// Show/hide menu with keyboard 'Enter' and 'Spacebar' keys
-hamburger.addEventListener('keydown', function(keyboardEvent) {
-    if (keyboardEvent.key === 'Enter' || keyboardEvent.key === ' ') {
-        keyboardEvent.preventDefault();
-        toggleMobileMenu();
+  if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+    if (isFirstMenuItem) {
+      allMenuItems.item(allMenuItems.length - 1).focus();
+      return;
     }
-})
+    previousMenuItem.focus();
+  }
+};
 
-// Hide menu when clicking any menu link
-document.querySelectorAll('#mobile-menu li').forEach(link => {
-    link.addEventListener('click', function(){
-        toggleMobileMenu();
-    })
-})
+const CloseMenu = () => {
+  openMenuIcon.setAttribute("aria-expanded", "false");
+  openMenuIcon.classList.remove("hide");
+  openMenuIcon.focus();
+  menuContainer.classList.add("hide");
+  menuContainer.setAttribute("aria-hidden", "true");
+  openMenuIcon.setAttribute("aria-expanded", "false");
+};
+
+const OpenAndCloseMenu = () => {
+  openMenuIcon.addEventListener("click", OpenMenu);
+  closeMenuIcon.addEventListener("click", CloseMenu);
+};
+
+OpenAndCloseMenu();

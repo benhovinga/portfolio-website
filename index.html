@@ -10,28 +10,37 @@
     <script src="./js/navigation.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul id="desktop-menu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div id="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <hr class="hamline"/>
-                <hr class="hamline"/>
-                <hr class="hamline"/>
-            </div>
-            <ul id="mobile-menu" aria-hidden="true">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="flex-1">
+        <div class="flex-1 mobile-header">
+            <div id="site-title">Benjamin P.C. Hovinga</div>
+            <button
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="menu-wrapper"
+                id="open-menu"
+            >
+                <img src="images/icon-menu.svg" alt="open navigation" />
+            </button>
+        </div>
+        <div class="hide transparent-bg" id="menu-container" aria-hidden="true">
+            <nav class="navigation-container">
+                <ul class="navigation-menu" id="menu-wrapper" role="menu" aria-labelledby="open-menu">
+                    <li class="menu-icon">
+                        <button role="menu-item" aria-expanded="false" id="close-menu">
+                            <img
+                                src="images/icon-close-menu.svg"
+                                alt="close navigation menu"
+                            />
+                        </button>
+                    </li>
+                    <li><a href="#hero" role="menu-item">Home</a></li>
+                    <li><a href="#skills" role="menu-item">Skills</a></li>
+                    <li><a href="#resume" role="menu-item">Resume</a></li>
+                    <li><a href="#mission" role="menu-item">Mission</a></li>
+                    <li><a href="#contact" role="menu-item">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div id="hero">
