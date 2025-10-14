@@ -47,11 +47,11 @@ acronym {
     cursor: help;
 }
 
-.container img {
+/* .container img {
     display: block;
     max-width: 100%;
     height: auto;
-}
+} */
 
 figcaption {
     font-style: italic;
@@ -109,7 +109,6 @@ nav a:hover {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
     padding-top: 4.35rem;
 }
 
@@ -117,8 +116,21 @@ nav a:hover {
     background-color: rgba(0, 20, 0, 0.4);
     align-content:center;
     text-align: center;
-    padding: 0 2rem;
-    height: 100%;
+    padding: 2rem;
+    min-height: 70vh;
+}
+
+#hero-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap:2rem;
+}
+
+#selfie-img {
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
 #hero-flex {
@@ -209,6 +221,22 @@ section h2 {
     border-top: 2px dotted var(--primary);
     max-width: 75ch;
     margin: 2rem auto;
+}
+
+/* SKILLS SECTION */
+
+#skills .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-auto-rows: 10rem;
+    gap: 10px;
+}
+
+#skills .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: small;
 }
 
 /* FOOTER SECTION */
