@@ -133,6 +133,19 @@ nav a:hover {
     box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
+#hero-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap:2rem;
+}
+
+#selfie-img {
+    border-radius: 50%;
+    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
+}
+
 #hero h1 {
     font-family: var(--font-header);
     font-size: 4rem;
