@@ -64,6 +64,10 @@ h2 {
     font-size: 2.5rem;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /* NAVIGATION */
 
 #mobile-menu, #hamburger {
@@ -237,6 +241,18 @@ section h2 {
     flex-direction: column;
     align-items: center;
     font-size: small;
+}
+
+
+/* CONTACT SECTION */
+.email-container {
+    text-align: center;
+    background-color: var(--white);
+    padding: 1rem;
+    margin: 0 auto;
+    min-width: max-content;
+    width: 60%;
+    border-radius: 2rem;
 }
 
 /* FOOTER SECTION */
