@@ -253,6 +253,9 @@ section h2 {
     min-width: max-content;
     width: 60%;
     border-radius: 2rem;
+    height: 6rem;
+    font-size: larger;
+    align-content: center;
 }
 
 /* FOOTER SECTION */

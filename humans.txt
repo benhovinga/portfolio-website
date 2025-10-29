@@ -4,7 +4,7 @@
     Location: Halifax, Nova Scotia, Canada
 
 /* THANKS */
-
+    websilvercraft: For the email protection script (https://dev.to/websilvercraft/how-to-protect-email-addresses-from-spam-bots-3cji)
 
 /* SITE */
     Last update: 2025-10-04
