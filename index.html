@@ -9,6 +9,7 @@
     <link type="text/plain" rel="author" href="./humans.txt" />
     <script src="./scripts/mobile-nav-menu.js" defer></script>
     <script src="./scripts/email-protection.js" defer></script>
+    <script src="./scripts/pgp-modal.js" defer></script>
 </head>
 <body>
     <header>
@@ -117,9 +118,39 @@
 
         <section id="contact" class="container">
             <h2>Contact</h2>
-            <div class="email-container">
-                <strong>E-mail:</strong> <a href="#" class="email-protect" data-user="ben" data-domain="hovinga.ca">--javaScript required--</a>
+            <div id="socials">
+                <ul>
+                    <li><strong>E-mail:</strong> <span><a href="#" class="email-protect" data-user="ben" data-domain="hovinga.ca">--javaScript required--</a> (<a id="show-pgp-button" href="#">PGP Key</a>)</span></li>
+                    <li><strong>LinkedIn:</strong> <span><a href="https://www.linkedin.com/in/ben-hovinga/">ben-hovinga</a></span></li>
+                    <li><strong>Signal:</strong> <span>syntax.01</span></li>
+                </ul>
             </div>
+            
+            <dialog id="pgp" closedby="any">
+                <div>
+                    <h1>My PGP Key</h1>
+                    <button>Close</button>
+                </div>
+                <button id="pgp-copy">
+                    <img src="./images/2ZAX3hVsBE-3000x3000.png" width="20" height="20" />
+                    <span>Copy to clipboard</span>
+                </button>
+                <pre id="pgp-key">
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+xjMEYuQZZBYJKwYBBAHaRw8BAQdAyvtuuvfLFxkEkdOk7dNy6GyYDXdvfRxi
+BXlUE2K3jxHNH2JlbkBob3ZpbmdhLmNhIDxiZW5AaG92aW5nYS5jYT7CjwQQ
+FgoAIAUCYuQZZAYLCQcIAwIEFQgKAgQWAgEAAhkBAhsDAh4BACEJENmPU9wi
+kqffFiEEtMJ+IIhOAOxPBDGb2Y9T3CKSp99abAEAl3ORb3XcEmETn4znF7at
+x/ToEZJW6Eh1Jm73eMBfe74BAI4g+LYRWyHnZqkMC5lgP5mjvOxDTSvJPyKV
+ZqOLtVIFzjgEYuQZZBIKKwYBBAGXVQEFAQEHQAW8PxDQYyNfcpogeyI/du77
+uK5LKQhhMgiEWNd7p4AGAwEIB8J4BBgWCAAJBQJi5BlkAhsMACEJENmPU9wi
+kqffFiEEtMJ+IIhOAOxPBDGb2Y9T3CKSp98rMgEAvEqd1HOm6xVoRZJB5veR
+85UBfBeZcDELWZRtEvsWSOEA/0XeCG9ex7T8GNfofCSlAh5IN/Kqg/CO00B2
+P3wSr3kC
+=JdQO
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+            </dialog>
         </section>
     </main>
 
