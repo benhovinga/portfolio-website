@@ -10,6 +10,7 @@
     --background: #f0fff2;
     --primary: #326b31;
     --secondary: #04AA6D;
+    --tertiary: #8eb08e;
     --black: #000000;
     --white: #FFFFFF;
     --font-header: "Dancing Script", serif;
@@ -243,6 +244,93 @@ section h2 {
     font-size: small;
 }
 
+/* RESUME SECTION */
+.company-group {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+.company-logo {
+    width: 48px;
+    height: 48px;
+}
+.company-date {
+    margin-left: auto;
+    font-style: italic;
+}
+
+.position-group {
+    /* padding-left: 4rem; */
+    list-style: none;
+    margin-block-start: 0.8rem;
+    /* width: -webkit-fill-available; */
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+.position {
+    display: flex;
+    gap: 2.4rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.position-bar {
+    /* padding-inline-start: 0.4rem;
+    padding-inline-end: 0.4rem; */
+    /* padding-block-start: 0.8rem; */
+    flex-shrink: 0;
+    position: relative;
+    /* width: 1.6rem; */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.position-bar-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: var(--tertiary);
+    border-radius: 0.3rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+.position-bar-dot::before{
+    content: "";
+    background-color: var(--tertiary);
+    top: 30px;
+    left: 3px;
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+.position:last-of-type .position-bar-dot::before {
+    display: none;
+}
+.position-info h4{
+    padding: 0;
+    margin: 0;
+}
+.position-date {
+    font-style: italic;
+    font-size: small;
+}
+
+/* MISSION SECTION */
+.mission-statement {
+    font-style: italic;
+    font-size: large;
+    line-height: 2rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+}
 
 /* CONTACT SECTION */
 #socials {
