@@ -16,6 +16,9 @@
     --font-header: "Dancing Script", serif;
     --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --mobile-breakpoint: 720px;
+    --bgc0: #78917b;
+    --bgc1: rgba(255,255,255,.1);
+    --bgc2: rgba(0,0,0,.1);
 }
 
 html {
@@ -28,6 +31,13 @@ body {
     margin: 0;
     background-color: var(--background);
     font-family: var(--font-body);
+    background-color: var(--bgc0);
+    background-image:
+        repeating-linear-gradient(120deg, var(--bgc1), var(--bgc1) 1px, transparent 1px, transparent 60px),
+        repeating-linear-gradient(60deg, var(--bgc1), var(--bgc1) 1px, transparent 1px, transparent 60px),
+        linear-gradient(60deg, var(--bgc2) 25%, transparent 25%, transparent 75%, var(--bgc2) 75%, var(--bgc2)),
+        linear-gradient(120deg, var(--bgc2) 25%, transparent 25%, transparent 75%, var(--bgc2) 75%, var(--bgc2));
+    background-size: 70px 120px;
 }
 
 /* GLOBAL ELEMENTS */
@@ -90,6 +100,7 @@ h2 {
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
+    z-index: 99;
 }
 
 #desktop-menu li + li:before {
@@ -216,16 +227,11 @@ section h2 {
 }
 
 .container {
-    padding: 1rem;
-    margin: 0 auto;
+    padding: 2rem;
+    margin: 3.5rem auto 0;
     max-width: 75ch;
-}
-
-.separator {
-    border: 0;
-    border-top: 2px dotted var(--primary);
-    max-width: 75ch;
-    margin: 2rem auto;
+    background-color: var(--background);
+    border-radius: 30px;
 }
 
 /* SKILLS SECTION */
@@ -289,6 +295,7 @@ section h2 {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
 .position-bar-dot {
     width: 0.5rem;
@@ -335,11 +342,11 @@ section h2 {
 /* CONTACT SECTION */
 #socials {
     text-align: left;
-    background-color: var(--white);
-    padding: 1.5rem 2.5rem;
+    /* background-color: var(--white); */
+    /* padding: 1.5rem 2.5rem; */
     margin: 0 auto;
     min-width: max-content;
-    width: 60%;
+    width: 70%;
     border-radius: 2rem;
     font-size: larger;
     align-content: center;
@@ -355,7 +362,8 @@ section h2 {
 }
 #socials li strong {
     display: inline-block;
-    width: 100px;
+    width: 140px;
+    margin-left: 3rem;
 }
 
 /* PGP Key Dialog */
