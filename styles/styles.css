@@ -81,7 +81,11 @@ h2 {
 
 /* NAVIGATION */
 
-#mobile-menu, #hamburger {
+nav{
+    color: var(--primary);
+}
+
+#mobile-menu, .menu-btn {
     display: none;
 }
 
@@ -101,20 +105,33 @@ h2 {
     align-items: center;
     font-size: 1.3rem;
     z-index: 99;
+    animation: fade-menu 1s linear;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
 }
-
+@keyframes fade-menu {
+    from {
+        color: var(--white);
+        background-color: rgba(255,255,255,0);
+    }
+    to {
+        color: var(--primary);
+        background-color: var(--background);
+    }
+}
 #desktop-menu li + li:before {
     /* Generates separator pipes between menu items */
-    color: var(--primary);
+    color: inherit;
     content: "|";
     padding-right: 1rem;
 }
-
 nav a {
+    color: inherit;
     text-decoration: none;
 }
 
 nav a:hover {
+    color: inherit;
     text-decoration: underline;
 }
 
@@ -125,7 +142,6 @@ nav a:hover {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 4.35rem;
 }
 
 #hero {
@@ -134,19 +150,6 @@ nav a:hover {
     text-align: center;
     padding: 2rem;
     min-height: 70vh;
-}
-
-#hero-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    gap:2rem;
-}
-
-#selfie-img {
-    border-radius: 50%;
-    box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5);
 }
 
 #hero-flex {
@@ -505,15 +508,34 @@ footer {
 
     /* NAVIGATION */
 
+    /* nav {
+        background-color: var(--background);
+        padding: 0.5rem 0;
+    } */
+
     #desktop-menu {
         display: none;
     }
-
-    #hamburger {
-        border: 1px solid var(--primary);
-        height: 3rem;
-        width: 3rem;
-        margin: 1rem auto;
+    .menu-btn {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        cursor: pointer;
+        display: block;
+        width: 48px;
+        margin: 0 1rem 0 auto;
+    }
+    .menu-btn-name {
+        text-align: center;
+        color: var(--white);
+    }
+    .hamburger {
+        border: 2px solid var(--white);
+        background-color: var(--secondary);
+        border-radius: 5px;
+        height: 48px;
+        width: 48px;
+        margin: 0;
         padding: 0;
         cursor: pointer;
         display: block;
@@ -522,22 +544,25 @@ footer {
     .hamline {
         width: 80%;
         height: 2px;
-        margin-top: 10px;
-        border-style: solid;
+        padding: 0;
+        margin: 9px auto;
+        border: 1px solid var(--white);
+        background-color: var(--white);
+        border-radius: 5px;
     }
     
     #mobile-menu {
         width: 100%;
         background-color: var(--background);
         position:absolute;
-        z-index: 10;
+        z-index: 99;
         max-height: 0;
         opacity: 0;
         overflow: hidden;
         transition: all .200s ease-in-out;
         display: block;
         list-style: none;
-        margin: 0;
+        margin: 100px 0 1rem;
         padding: 0;
     }
 
@@ -554,10 +579,19 @@ footer {
 
     /* HERO SECTION */
 
-    #hero-wrapper {
-        padding-top: 0;
+    #hero {
+        padding: 8rem 0.5rem;
     }
     #hero-flex {
         flex-direction: column;
     }
+
+    .container {
+        padding: 1rem;
+        margin: 1.5rem 0.5rem;
+        border-radius: 2rem;
+    }
+    /* TODO: Mobile Skills Section */
+    /* TODO: Mobile Contact Section */
+    /* TODO: Mobile Resume Section */
 }

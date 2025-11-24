@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
+    const hamburger = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     let isOpen = false;
 
