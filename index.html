@@ -18,18 +18,23 @@
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div id="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
-                <hr class="hamline"/>
-                <hr class="hamline"/>
-                <hr class="hamline"/>
+            <div class="menu-btn" id="mobile-menu-btn" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <div class="hamburger" >
+                    <hr class="hamline"/>
+                    <hr class="hamline"/>
+                    <hr class="hamline"/>
+                </div>
+                <div class="menu-btn-name">Menu</div>
             </div>
             <ul id="mobile-menu" aria-hidden="true">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#mission">Mission</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -43,7 +48,7 @@
                 <h1>Benjamin P.C. Hovinga, <acronym title="Canadian Decoration">CD</acronym></h1>
             </div>
             <div id="call-to-action">
-                <button class="button primary" onclick="window.location.href='#resume';">Download resume</button>
+                <button class="button primary" onclick="window.location.href='./assets/Benjamin_Hovinga_Resume.pdf';">Download resume</button>
                 <button class="button" onclick="window.location.href='#contact'">Get in touch</button>
             </div>
         </div>
@@ -95,8 +100,6 @@
                 </div>
             </div>
         </section>
-
-        <hr class="separator"/>
 
         <section id="resume" class="container">
             <h2>Resume</h2>
@@ -164,15 +167,56 @@
                 </li>
             </ul>
         </section>
-        
-        <hr class="separator" />
+
+        <section id="projects" class="container">
+            <h2>Recent Projects</h2>
+            
+            <h3>Portable Broadcast Station</h3>
+            <p>Using recycled hardware and scrap components I hacked together a portable live streaming kit. Smart phones, using the NDI protocol over WiFi, serve as our cameras. An old consumer WiFi router is being used to route the camera feeds to the broadcast laptop. The broadcast laptop is an old Asus gaming laptop with Ubuntu and OBS installed.</p>
+            <div class="gallery">
+                <figure class="gallery-item">
+                    <a href="./images/projects/broadcast_station/img1.jpg">
+                        <img src="./images/projects/broadcast_station/img1-thumb.webp" alt="Progress of developing the broadcast statio"/>
+                    </a>
+                    <figcaption>Development progress</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <a href="./images/projects/broadcast_station/img2.jpg">
+                        <img src="./images/projects/broadcast_station/img2-thumb.webp" alt=""/>
+                    </a>
+                    <figcaption>Snug fit inside the case</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <a href="./images/projects/broadcast_station/img3.jpg">
+                        <img src="./images/projects/broadcast_station/img3-thumb.webp" alt=""/>
+                    </a>
+                    <figcaption>Everything has it's place</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <a href="./images/projects/broadcast_station/img4.jpg">
+                        <img src="./images/projects/broadcast_station/img4-thumb.webp" alt=""/>
+                    </a>
+                    <figcaption>Transport mode</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <a href="./images/projects/broadcast_station/img5.jpg">
+                        <img src="./images/projects/broadcast_station/img5-thumb.webp" alt=""/>
+                    </a>
+                    <figcaption>Operation mode</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <a href="./images/projects/broadcast_station/broadcast_network.png">
+                        <img src="./images/projects/broadcast_station/broadcast_network-thumb.webp" alt=""/>
+                    </a>
+                    <figcaption>Network Topology</figcaption>
+                </figure>
+            </div>
+        </section>
 
         <section id="mission" class="container">
             <h2>Mission</h2>
             <p class="mission-statement">I live with integrity and honour, guided by inclusivity and a deep respect for people and the planet. My mission is to foster human‑centric solutions, nurture communities through care and compassion, and protect the environment for future generations. I dedicate myself to helping wherever I can, volunteering my time and energy to uplift others, and building a world rooted in fairness, sustainability, and shared responsibility.</p>
         </section>
-        
-        <hr class="separator" />
 
         <section id="contact" class="container">
             <h2>Contact</h2>
@@ -191,7 +235,7 @@
                     <button>Close</button>
                 </div>
                 <button id="pgp-copy">
-                    <img src="./images/2ZAX3hVsBE-3000x3000.png" width="20" height="20" />
+                    <img src="./images/checkmark.png" width="20" height="20" />
                     <span>Copy to clipboard</span>
                 </button>
                 <pre id="pgp-key">
